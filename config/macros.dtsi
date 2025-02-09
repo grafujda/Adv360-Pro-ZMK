@@ -12,7 +12,7 @@ label = "macro_kinesis";
 #binding-cells = <0>;
 wait-ms = <30>;
 tap-ms = <40>;
-bindings = <&macro_press &kp LSHFT>, <<&kp O>, <&macro_release &kp LSHFT>, < <&kp N>, <&kp K>, <&kp O>, <&kp M>, <&kp I>, <&kp L>, <&kp A>, <&kp KP_NUMBER_4>, <&kp KP_NUMBER_4>, <&kp ENTER>;
+bindings = <&macro_press &kp LSHFT>, <&kp O>, <&macro_release &kp LSHFT>, <&kp N>, <&kp K>, <&kp O>, <&kp M>, <&kp I>, <&kp L>, <&kp A>, <&kp KP_NUMBER_4>, <&kp KP_NUMBER_4>, <&kp ENTER>;
 };
 macro_conemu: macro_conemu{
 compatible = "zmk,behavior-macro";
@@ -20,5 +20,5 @@ label = "macro_conemu";
 #binding-cells = <0>;
 wait-ms = <30>;
 tap-ms = <40>;
-bindings = <&macro_press &kp LGUI>, <<&macro_press &kp LCTRL>, <<&kp J>, <&macro_release &kp LGUI>, <<&macro_release &kp LCTRL>;
+bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&kp J>, <&macro_release &kp LGUI>, <&macro_release &kp LCTRL>;
 };
