@@ -4,7 +4,7 @@ label = "macro_adgod";
 #binding-cells = <0>;
 wait-ms = <30>;
 tap-ms = <40>;
-bindings = <&macro_press &kp LSHFT>, <&kp K>, <&macro_release &kp LSHFT>, <&kp A>, <&kp K>, <&kp A>, <&kp M>, <&kp I>, <&kp T>, <&kp A>, <&kp MINUS>, <&kp STAR>, <&kp KP_NUMBER_7>, <&kp ENTER> ;
+bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp K> , <&macro_release &kp LSHFT>, <&macro_tap &kp A &kp K &kp A &kp M &kp I &kp T &kp A &kp MINUS &kp STAR &kp KP_NUMBER_7 &kp ENTER> ;
 };
 macro_kinesis: macro_kinesis{
 compatible = "zmk,behavior-macro";
@@ -12,7 +12,7 @@ label = "macro_kinesis";
 #binding-cells = <0>;
 wait-ms = <30>;
 tap-ms = <40>;
-bindings = <&macro_press &kp LSHFT>, <&kp O>, <&macro_release &kp LSHFT>, <&kp N>, <&kp K>, <&kp O>, <&kp M>, <&kp I>, <&kp L>, <&kp A>, <&kp KP_NUMBER_4>, <&kp KP_NUMBER_4>, <&kp ENTER>;
+bindings = <&macro_press &kp LSHFT>,<&macro_tap &kp O>, <&macro_release &kp LSHFT>, <&macro_tap &kp N &kp K &kp O &kp M &kp I &kp L &kp A &kp KP_NUMBER_4 &kp KP_NUMBER_4 &kp ENTER>;
 };
 macro_conemu: macro_conemu{
 compatible = "zmk,behavior-macro";
@@ -20,5 +20,5 @@ label = "macro_conemu";
 #binding-cells = <0>;
 wait-ms = <30>;
 tap-ms = <40>;
-bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&kp J>, <&macro_release &kp LGUI>, <&macro_release &kp LCTRL>;
+bindings = <&macro_press &kp LGUI &kp LCTRL>, <&macro_tap &kp J>, <&macro_release &kp LGUI &kp LCTRL>;
 };
