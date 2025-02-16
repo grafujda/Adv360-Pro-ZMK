@@ -22,3 +22,11 @@ wait-ms = <30>;
 tap-ms = <40>;
 bindings = <&macro_press &kp LGUI &kp LCTRL>, <&macro_tap &kp J>, <&macro_release &kp LGUI &kp LCTRL>;
 };
+macro_laq: macro_laq{
+compatible = "zmk,behavior-macro";
+label = "macro_laq";
+#binding-cells = <0>;
+wait-ms = <30>;
+tap-ms = <40>;
+bindings = <&macro_press &kp LALT &kp LCTRL>, <&macro_tap &kp Q>, <&macro_release &kp LALT &kp LCTRL>;
+};
