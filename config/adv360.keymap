@@ -40,7 +40,7 @@
 
         default_layer {
             bindings = <
- &kp EQUAL     &mt RA(N1) N1         &kp N2    &kp N3     &kp N4  &kp N5              &tog 1                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+ &kp EQUAL     &mt RA(N1) N1         &kp N2    &kp N3     &kp N4  &kp N5              &mo 1                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
    &kp TAB      &mt RA(Q) Q          &mt RA(W) W     &kp E      &kp R   &kp T               &none                                                                 &kp LA(F9)   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp LBKT
    &kp ESC      &kp A          &kp S     &kp D      &mt RA(F) F   &mt RA(G) G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &macro_conemu   &kp H   &kp J      &kp K     &kp L  &mt RA(SEMI) SEMI  &mt SQT ENTER
  &kp LSHFT      &kp Z          &mt RA(X) X     &mt RA(C) C    &mt RA(V) V   &mt RA(B) B            &kp HOME                 &kp PG_UP                         &mt RA(N) N   &mt RA(M) M  &mt RA(COMMA) COMMA   &mt RA(DOT) DOT  &mt RA(FSLH) FSLH  &kp RSHFT
@@ -54,17 +54,17 @@
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T               &none                                                                 &none   &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS   &kp BSLH
    &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp SQT
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                 &kp HOME                  &kp PG_UP                         &kp N   &kp KP_N1     &kp KP_N2      &kp KP_N3     &kp KP_ENTER  &kp RSHFT
-     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp KP_N0              &kp DOWN      &kp UP     &kp KP_DOT         &kp RBKT      &mo 2
+     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp KP_N0           &kp KP_N0      &kp UP     &kp KP_DOT         &kp RBKT      &mo 2
             >;
         };
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4            &kp F5                 &kp F6                    &tog 1                                                   &mo 3           &kp F7    &kp F8  &kp F9    &kp F10     &kp F11        &kp F12
- &trans  &trans  &trans  &trans            &trans                 &trans                     &macro_adgod                                            &none           &trans    &trans  &macro_iv     &trans      &trans  &kp BACKSLASH
- &trans  &trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET            &macro_kinesis  &trans  &trans                  &trans  &trans   &none         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR       &kp PIPE
+ &kp F1  &kp F2  &kp F3  &kp F4            &kp F5         &kp F6                    &tog 1                                                   &mo 3           &kp F7    &kp F8  &kp F9    &kp F10     &kp F11        &kp F12
+ &trans  &trans  &trans  &trans            &trans         &trans                     &macro_adgod                                            &none           &trans    &trans  &macro_iv     &trans      &trans  &kp BACKSLASH
+ &trans  &trans  &trans  &trans            &trans         &trans            &macro_kinesis  &trans  &trans                  &trans  &kp LC(X)   &none         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR       &kp PIPE
  &trans  &trans  &trans  &trans            &macro_vm      &trans                                    &trans                  &trans                  &kp RIGHT_BRACE    &trans  &trans     &trans      &trans         &trans
- &trans  &trans  &trans  &trans            &trans                                           &trans  &trans  &trans                  &trans  &trans  &trans                     &trans  &trans     &trans      &trans         &trans
+ &trans  &trans  &trans  &trans            &trans                                   &kp LCTRL  &kp LSHFT  &trans                  &trans  &kp LC(C)  &kp LC(V)                     &trans  &trans     &trans      &trans         &trans
             >;
         };
 
