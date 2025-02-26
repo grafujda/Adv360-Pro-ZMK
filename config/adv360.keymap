@@ -41,10 +41,10 @@
         default_layer {
             bindings = <
  &kp EQUAL     &mt RA(N1) N1         &kp N2    &kp N3     &kp N4  &kp N5              &mo 1                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-   &kp TAB      &mt RA(Q) Q          &mt RA(W) W     &kp E      &kp R   &kp T               &none                                                                 &kp LA(F9)   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp LBKT
-   &kp ESC      &kp A          &kp S     &kp D      &mt RA(F) F   &mt RA(G) G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &macro_conemu   &kp H   &kp J      &kp K     &kp L  &mt RA(SEMI) SEMI  &mt SQT ENTER
+ &kp TAB      &mt RA(Q) Q          &mt RA(W) W     &kp E      &kp R   &kp T               &none                                                                 &kp LA(F9)   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp LBKT
+ &kp ESC      &kp A          &kp S     &kp D      &mt RA(F) F   &mt RA(G) G               &none  &mo 2  &kp LALT                   &kp LGUI   &mo 2      &macro_conemu   &kp H   &kp J      &kp K     &kp L  &mt RA(SEMI) SEMI  &mt SQT ENTER
  &kp LSHFT      &kp Z          &mt RA(X) X     &mt RA(C) C    &mt RA(V) V   &mt RA(B) B            &kp HOME                 &kp PG_UP                         &mt RA(N) N   &mt RA(M) M  &mt RA(COMMA) COMMA   &mt RA(DOT) DOT  &mt RA(FSLH) FSLH  &kp RSHFT
-     &mo 2  &kp GRAVE  &kp RIGHT_ALT  &kp LEFT  &lt 1 RIGHT                    &mt BSPC SPACE    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp SPACE          &lt 1 DOWN  &kp UP   &kp BSLH  &kp RBKT      &mo 2
+ &kp LCTRL &kp GRAVE  &kp RIGHT_ALT  &kp LEFT  &lt 1 RIGHT                    &mt BSPC SPACE    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp SPACE          &lt 1 DOWN  &kp UP   &kp BSLH  &kp RBKT &kp RCTRL
             >;
         };
 

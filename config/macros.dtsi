@@ -29,11 +29,21 @@ label = "macro_iv";
 wait-ms = <30>;
 tap-ms = <40>;
 bindings = <&macro_tap &kp V &kp L &kp A &kp D &kp I &kp S &kp L &kp A &kp V &kp DOT &kp U &kp H &kp E &kp R &kp TAB>
+        , <&macro_tap &kp M>
         ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp K>
+        , <&macro_tap &kp B>
         , <&macro_release &kp LSHFT>
-        , <&macro_tap &kp A &kp K &kp A &kp M &kp I &kp T &kp A &kp KP_NUMBER_0 &kp KP_NUMBER_4 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp KP_NUMBER_5 &kp KP_NUMBER_7 &kp KP_NUMBER_6 &kp KP_NUMBER_5  &kp ENTER>;
+        , <&macro_tap &kp KP_NUMBER_4 &kp J &kp A> 
+        ,<&macro_press &kp LSHFT>
+        , <&macro_tap &kp D>
+        , <&macro_release &kp LSHFT>
+        ,<&macro_tap &kp J &kp KP_NUMBER_2 &kp D &kp M>
+        ,<&macro_press &kp LSHFT>
+        , <&macro_tap &kp B>
+        , <&macro_release &kp LSHFT>
+        ,<&macro_tap &kp KP_NUMBER_1 &kp J &kp B &kp M &kp S  &kp ENTER>;
 };
+
 macro_vm: macro_vm{
 compatible = "zmk,behavior-macro";
 label = "macro_vm";
