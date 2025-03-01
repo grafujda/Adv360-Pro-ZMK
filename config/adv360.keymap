@@ -1,159 +1,216 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-
 /* THIS FILE WAS GENERATED!
  *
  * This file was generated automatically. You may or may not want to
  * edit it directly.
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
-#include <dt-bindings/zmk/backlight.h>
 #include "keys_cs.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
-  behaviors {
+    behaviors {
+        macro_adgod: macro_adgod {
+            compatible = "zmk,behavior-macro";
+            label = "macro_adgod";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp K>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp A &kp K &kp A &kp M &kp I &kp T &kp A &kp KP_MINUS &kp KP_MULTIPLY &kp KP_NUMBER_7 &kp ENTER>;
+        };
 
-macro_adgod: macro_adgod{
-compatible = "zmk,behavior-macro";
-label = "macro_adgod";
-#binding-cells = <0>;
-wait-ms = <30>;
-tap-ms = <40>;
-bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp K>, <&macro_release &kp LSHFT>, <&macro_tap &kp A &kp K &kp A &kp M &kp I &kp T &kp A &kp KP_MINUS &kp KP_MULTIPLY &kp KP_NUMBER_7 &kp ENTER>;
-};
-macro_um: macro_um{
-compatible = "zmk,behavior-macro";
-label = "macro_um";
-#binding-cells = <0>;
-wait-ms = <30>;
-tap-ms = <40>;
-bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp O>, <&macro_release &kp LSHFT>, <&macro_tap &kp N &kp K &kp O &kp M &kp I &kp L &kp A &kp KP_NUMBER_4 &kp KP_NUMBER_4 &kp ENTER>;
-};
-macro_conemu: macro_conemu{
-compatible = "zmk,behavior-macro";
-label = "macro_conemu";
-#binding-cells = <0>;
-wait-ms = <30>;
-tap-ms = <40>;
-bindings = <&macro_press &kp LGUI>, <&macro_press &kp LCTRL>, <&macro_tap &kp J>, <&macro_release &kp LGUI>, <&macro_release &kp LCTRL>;
-};
-macro_iv: macro_iv{
-compatible = "zmk,behavior-macro";
-label = "macro_iv";
-#binding-cells = <0>;
-wait-ms = <30>;
-tap-ms = <40>;
-bindings = <&macro_tap &kp V &kp L &kp A &kp D &kp I &kp S &kp L &kp A &kp V &kp DOT &kp U &kp H &kp E &kp R &kp TAB>
-        , <&macro_tap &kp M>
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LSHFT>
-        , <&macro_tap &kp KP_NUMBER_4 &kp J &kp A> 
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp D>
-        , <&macro_release &kp LSHFT>
-        ,<&macro_tap &kp J &kp KP_NUMBER_2 &kp D &kp M>
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LSHFT>
-        ,<&macro_tap &kp KP_NUMBER_1 &kp J &kp B &kp M &kp S  &kp ENTER>;
-};
+        macro_um: macro_um {
+            compatible = "zmk,behavior-macro";
+            label = "macro_um";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp O>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp N &kp K &kp O &kp M &kp I &kp L &kp A &kp KP_NUMBER_4 &kp KP_NUMBER_4 &kp ENTER>;
+        };
 
-macro_vm: macro_vm{
-compatible = "zmk,behavior-macro";
-label = "macro_vm";
-#binding-cells = <0>;
-wait-ms = <30>;
-tap-ms = <40>;
-bindings = <&macro_tap &kp V &kp S &kp P &kp H &kp E &kp R &kp E &kp DOT &kp L &kp O &kp C &kp A &kp L &kp RA(Q) &kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB>
-        , <&macro_tap &kp M>
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LSHFT>
-        , <&macro_tap &kp KP_NUMBER_4 &kp J &kp A>
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp D>
-        , <&macro_release &kp LSHFT>
-        , <&macro_tap &kp J &kp KP_NUMBER_2 &kp D &kp M >
-        ,<&macro_press &kp LSHFT>
-        , <&macro_tap &kp B>
-        , <&macro_release &kp LSHFT>
-        , <&macro_tap &kp KP_NUMBER_1 &kp J &kp B &kp M &kp S &kp KP_MULTIPLY  &kp ENTER>;
-};
+        macro_conemu: macro_conemu {
+            compatible = "zmk,behavior-macro";
+            label = "macro_conemu";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp J>,
+                <&macro_release>,
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LCTRL>;
+        };
 
-    #include "version.dtsi"
+        macro_iv: macro_iv {
+            compatible = "zmk,behavior-macro";
+            label = "macro_iv";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_tap>,
+                <&kp V &kp L &kp A &kp D &kp I &kp S &kp L &kp A &kp V &kp DOT &kp U &kp H &kp E &kp R &kp TAB>,
+                <&macro_tap>,
+                <&kp M>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4 &kp J &kp A>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp J &kp KP_NUMBER_2 &kp D &kp M>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp J &kp B &kp M &kp S &kp ENTER>;
+        };
 
-    hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <175>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
+        macro_vm: macro_vm {
+            compatible = "zmk,behavior-macro";
+            label = "macro_vm";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_tap>,
+                <&kp V &kp S &kp P &kp H &kp E &kp R &kp E &kp DOT &kp L &kp O &kp C &kp A &kp L &kp RA(Q) &kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB>,
+                <&macro_tap>,
+                <&kp M>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4 &kp J &kp A>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp J &kp KP_NUMBER_2 &kp D &kp M>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp B>,
+                <&macro_release>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp J &kp B &kp M &kp S &kp KP_MULTIPLY &kp ENTER>;
+        };
+
+        #include "version.dtsi"
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
-  };
+
+    macros {
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
- &kp EQUAL    &mt RA(N1) N1         &kp N2    &kp N3     &kp N4  &kp N5              &mo 1                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
- &kp TAB      &mt RA(Q) Q          &mt RA(W) W     &kp E      &kp R   &kp T               &none                                                             &kp LA(F9)   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp LBKT
- &kp ESC      &kp A          &kp S     &kp D      &mt RA(F) F   &mt RA(G) G               &none  &mo 2  &kp LALT                   &kp LGUI   &mo 2         &macro_conemu   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &kp ENTER
- &kp LSHFT    &kp Z        &kp X     &kp C    &kp V   &kp B            &kp HOME                 &kp PG_UP                       &kp N   &kp  M  &kp COMMA   &mt RA(DOT) DOT  &mt RA(FSLH) FSLH  &kp RSHFT
- &kp LCTRL &kp GRAVE  &kp RIGHT_ALT  &kp LEFT  &lt 4 RIGHT                    &kp SPACE    &kp DEL   &kp END                  &kp PG_DN  &kp BSPC  &kp SPACE          &lt 4 DOWN  &kp UP   &kp BSLH  &kp RBKT &kp RCTRL
+&kp N1     &kp N2     &kp NUMBER_3  &kp N4    &kp N5       &kp N6  &mo 1                                                  &mo 3          &kp N7  &kp N8      &kp N9     &kp N0    &kp N0    &kp EQUAL
+&kp TAB    &kp Q      &kp W         &kp E     &kp R        &kp T   &none                                                  &kp LA(F9)     &kp Y   &kp U       &kp I      &kp O     &kp P     &kp LBKT
+&kp ESC    &kp A      &kp S         &kp D     &kp F        &kp G   &none      &mo 2    &kp LALT      &kp LGUI   &mo 2     &macro_conemu  &kp H   &kp J       &kp K      &kp L     &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z      &kp X         &kp C     &kp V        &kp B                       &kp HOME      &kp PG_UP                           &kp N   &kp M       &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LCTRL  &kp GRAVE  &kp APOS      &kp LEFT  &lt 4 RIGHT          &kp SPACE  &kp DEL  &kp END       &kp PG_DN  &kp BSPC  &kp SPACE              &lt 4 DOWN  &kp UP     &kp BSLH  &kp RBKT  &kp RCTRL
             >;
         };
 
         layer_keypad {
             bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5              &trans                                                                 &mo 3  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T               &none                                                                 &none   &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS   &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                 &kp HOME                  &kp PG_UP                         &kp N   &kp KP_N1     &kp KP_N2      &kp KP_N3     &kp KP_ENTER  &kp RSHFT
-     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp KP_N0           &kp KP_N0      &kp COMMA     &kp KP_DOT         &kp RBKT      &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp KP_N0   &kp COMMA     &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4            &kp F5         &kp F6                    &mo 1                                             &mo 3           &kp F7    &kp F8  &kp F9    &kp F10     &kp F11        &kp F12
- &trans  &trans  &trans  &trans            &trans         &trans                    &trans                                            &none           &trans    &trans  &trans     &trans      &trans  &kp BACKSLASH
- &trans  &trans  &trans  &trans            &trans         &trans                    &trans  &trans  &trans                  &trans  &kp LC(X)   &none         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR       &kp PIPE
- &trans  &trans  &trans  &trans            &trans         &trans                                    &trans                  &trans                  &kp RIGHT_BRACE    &trans  &trans     &trans      &trans         &trans
- &trans  &trans  &trans  &trans            &trans                                   &kp LCTRL  &kp LSHFT  &trans                  &trans  &kp LC(C)  &kp LC(V)                     &trans  &trans     &trans      &trans         &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mo 1                                                &mo 3      &kp F7           &kp F8    &kp F9  &kp F10    &kp F11     &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans           &trans    &trans  &trans     &trans      &kp BACKSLASH
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT         &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR  &kp PIPE
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &kp RIGHT_BRACE  &trans    &trans  &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans          &kp LCTRL  &kp LSHFT  &trans      &trans  &kp LC(C)  &kp LC(V)                   &trans    &trans  &trans     &trans      &trans
             >;
         };
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
         layer_ces {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &macro_adgod                                                                   &none    &trans      &macro_um   &macro_iv   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &macro_um   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+&kp CS_TILDE  &none             &kp CS_CARET  &none             &none                &none                 &none                                         &trans  &kp CS_GRAVE        &none      &none      &none      &none          &none
+&none         &kp CS_BACKSLASH  &kp CS_PIPE   &none             &none                &none                 &macro_adgod                                  &none   &trans              &macro_um  &macro_iv  &none      &none          &none
+&none         &none             &none         &none             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &none  &none      &none  &none  &none   &none               &none      &none      &none      &kp CS_DOLLAR  &none
+&none         &none             &kp CS_HASH   &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &none      &none                 &kp CS_RIGHT_BRACE  &none      &kp CS_LT  &kp CS_GT  &kp CS_ASTRK   &none
+&none         &none             &none         &none             &none                                      &none         &none  &none      &none  &none  &none                       &none      &none      &none      &none          &none
             >;
         };
     };
