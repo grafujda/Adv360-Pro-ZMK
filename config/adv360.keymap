@@ -166,11 +166,11 @@
 
         default_layer {
             bindings = <
-&kp N1     &kp N2     &kp NUMBER_3  &kp N4    &kp N5       &kp N6  &mo 1                                                  &mo 3          &kp N7  &kp N8      &kp N9     &kp N0    &kp N0    &kp EQUAL
-&kp TAB    &kp Q      &kp W         &kp E     &kp R        &kp T   &none                                                  &kp LA(F9)     &kp Y   &kp U       &kp I      &kp O     &kp P     &kp LBKT
-&kp ESC    &kp A      &kp S         &kp D     &kp F        &kp G   &none      &mo 2    &kp LALT      &kp LGUI   &mo 2     &macro_conemu  &kp H   &kp J       &kp K      &kp L     &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z      &kp X         &kp C     &kp V        &kp B                       &kp HOME      &kp PG_UP                           &kp N   &kp M       &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp LCTRL  &kp GRAVE  &kp APOS      &kp LEFT  &lt 4 RIGHT          &kp SPACE  &kp DEL  &kp END       &kp PG_DN  &kp BSPC  &kp SPACE              &lt 4 DOWN  &kp UP     &kp BSLH  &kp RBKT  &kp RCTRL
+&kp N1     &kp N2     &kp NUMBER_3  &kp N4    &kp N5  &kp N6  &mo 1                                                       &mo 3          &kp N7  &kp N8  &kp N9     &kp N0    &kp N0    &kp EQUAL
+&kp TAB    &kp Q      &kp W         &kp E     &kp R   &kp T   &none                                                       &kp LA(F9)     &kp Y   &kp U   &kp I      &kp O     &kp P     &kp LBKT
+&kp ESC    &kp A      &kp S         &kp D     &kp F   &kp G   &none      &mo 2          &kp LALT      &kp LGUI   &mo 2    &macro_conemu  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z      &kp X         &kp C     &kp V   &kp B                             &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LCTRL  &kp GRAVE  &kp APOS      &kp LEFT  &mo 4           &kp SPACE  &kp BACKSPACE  &kp END       &kp PG_DN  &kp DEL  &kp SPACE              &mo 4   &kp UP     &kp BSLH  &kp RBKT  &kp RCTRL
             >;
         };
 
@@ -186,31 +186,31 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mo 1                                                &mo 3      &kp F7           &kp F8    &kp F9  &kp F10    &kp F11     &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans           &trans    &trans  &trans     &trans      &kp BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT         &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR  &kp PIPE
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &kp RIGHT_BRACE  &trans    &trans  &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans          &kp LCTRL  &kp LSHFT  &trans      &trans  &kp LC(C)  &kp LC(V)                   &trans    &trans  &trans     &trans      &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mo 1                                                &mo 3      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11     &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans    &trans    &trans  &trans     &trans      &kp BACKSLASH
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR  &kp PIPE
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &none     &trans    &trans  &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans          &kp LCTRL  &kp LSHFT  &trans      &trans  &kp LC(C)  &kp LC(V)            &trans    &trans  &trans     &trans      &trans
             >;
         };
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
+&none   &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
+&trans  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none   &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
+&none   &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
         layer_ces {
             bindings = <
-&kp CS_TILDE  &none             &kp CS_CARET  &none             &none                &none                 &none                                         &trans  &kp CS_GRAVE        &none      &none      &none      &none          &none
-&none         &kp CS_BACKSLASH  &kp CS_PIPE   &none             &none                &none                 &macro_adgod                                  &none   &trans              &macro_um  &macro_iv  &none      &none          &none
-&none         &none             &none         &none             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &none  &none      &none  &none  &none   &none               &none      &none      &none      &kp CS_DOLLAR  &none
-&none         &none             &kp CS_HASH   &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &none      &none                 &kp CS_RIGHT_BRACE  &none      &kp CS_LT  &kp CS_GT  &kp CS_ASTRK   &none
-&none         &none             &none         &none             &none                                      &none         &none  &none      &none  &none  &none                       &none      &none      &none      &none          &none
+&kp CS_TILDE  &none             &kp CS_CARET  &none             &none                &none                 &none                                         &trans     &kp CS_GRAVE        &none          &none           &none      &none          &none
+&none         &kp CS_BACKSLASH  &kp CS_PIPE   &none             &none                &none                 &macro_adgod                                  &macro_iv  &trans              &kp PAGE_DOWN  &kp UP          &kp PG_UP  &none          &none
+&none         &none             &none         &none             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &none  &none      &none  &none  &macro_vm  &none               &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp CS_DOLLAR  &none
+&none         &none             &kp CS_HASH   &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &none      &none                    &kp CS_RIGHT_BRACE  &none          &kp CS_LT       &kp CS_GT  &kp CS_ASTRK   &none
+&none         &none             &none         &none             &none                                      &none         &none  &none      &none  &none  &none                          &none          &none           &none      &none          &none
             >;
         };
     };
