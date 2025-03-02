@@ -186,7 +186,7 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &mo 1                                                &mo 4      &kp F7    &kp F8    &kp F9  &kp F10    &kp F11     &kp F12
+ &kp F12 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5 &mo 1                                                &mo 4      &kp F6    &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans    &trans    &trans  &trans     &trans      &kp BACKSLASH
 &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR  &kp PIPE
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &none     &trans    &trans  &trans     &trans      &trans
@@ -196,11 +196,11 @@
 
         layer_ces {
             bindings = <
-&kp CS_TILDE  &none             &kp CARET    &none             &none                &none                 &none                                         &trans     &kp GRAVE           &none          &none           &none      &none          &none
-&none         &kp CS_BACKSLASH  &kp CS_PIPE  &none             &none                &none                 &macro_adgod                                  &macro_iv  &trans              &kp PAGE_DOWN  &kp UP          &kp PG_UP  &none          &none
-&none         &none             &none        &none             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &none  &none      &none  &none  &macro_vm  &none               &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp CS_DOLLAR  &kp BSLH
-&kp LSHIFT    &none             &kp CS_HASH  &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &none      &none                    &kp CS_RIGHT_BRACE  &none          &kp CS_LT       &kp CS_GT  &kp CS_ASTRK   &kp RSHFT
-&kp LCTRL     &none             &none        &none             &none                                      &none         &none  &none      &none  &none  &none                          &none          &none           &none      &none          &kp RCTRL
+&kp CS_TILDE  &trans             &kp CARET    &trans             &trans                &trans                 &trans                                         &trans     &kp GRAVE           &trans          &trans           &trans      &trans          &trans
+&trans         &kp CS_BACKSLASH  &kp CS_PIPE  &trans             &trans                &trans                 &macro_adgod                                  &macro_iv  &trans              &kp PAGE_DOWN  &kp UP          &kp PG_UP  &trans          &trans
+&trans         &trans             &trans        &trans             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans               &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp CS_DOLLAR  &kp BSLH
+&kp LSHIFT    &trans             &kp CS_HASH  &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &trans      &trans                    &kp CS_RIGHT_BRACE  &trans          &kp CS_LT       &kp CS_GT  &kp CS_ASTRK   &kp RSHFT
+&kp LCTRL     &trans             &trans        &trans             &trans                                      &trans         &trans  &trans      &trans  &trans  &trans                          &trans          &trans           &trans      &trans          &kp RCTRL
             >;
         };
 
