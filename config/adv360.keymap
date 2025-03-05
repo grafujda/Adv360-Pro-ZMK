@@ -166,7 +166,7 @@
 
         default_layer {
             bindings = <
-&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &mo 1                                                       &mo 4          &kp N7  &kp N8  &kp N9     &kp N0    &kp EQUAL  &kp SQT
+&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &mo 1                                                       &mo 4          &kp N7  &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL
 &kp TAB    &kp Q      &kp W         &kp E   &kp R   &kp T   &none                                                       &kp LA(F9)     &kp Y   &kp U   &kp I      &kp O     &kp P      &kp LBKT
 &kp ESC    &kp A      &kp S         &kp D   &kp F   &kp G   &none      &mo 2          &kp LALT      &kp LGUI   &mo 2    &macro_conemu  &kp H   &kp J   &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X         &kp C   &kp V   &kp B                             &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
@@ -186,21 +186,21 @@
 
         layer_fn {
             bindings = <
- &kp F12 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5 &mo 1                                                &mo 4      &kp F6    &kp F7    &kp F8    &kp F9  &kp F10    &kp F11    
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans    &trans    &trans  &trans     &trans      &kp BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp DOLLAR  &kp PIPE
-&trans  &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &none     &trans    &trans  &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans          &kp LCTRL  &kp LSHFT  &trans      &trans  &kp LC(C)  &kp LC(V)            &trans    &trans  &trans     &trans      &trans
+&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mo 1                                                &mo 4      &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &kp F11
+&trans   &trans  &trans  &trans  &trans  &trans  &trans                                               &none      &trans    &trans    &trans  &trans     &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans      &trans  &kp LC(X)  &none      &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&trans   &trans  &trans  &trans  &trans  &trans                        &trans      &trans                        &none     &trans    &trans  &trans     &trans   &trans
+&trans   &trans  &trans  &trans  &trans          &kp LCTRL  &kp LSHFT  &trans      &trans  &kp LC(C)  &kp LC(V)            &trans    &trans  &trans     &trans   &trans
             >;
         };
 
         layer_ces {
             bindings = <
-&kp CS_TILDE  &trans             &kp CARET    &trans             &trans                &trans                 &trans                                         &trans     &kp GRAVE           &trans          &trans           &trans      &trans          &trans
-&trans         &kp CS_BACKSLASH  &kp CS_PIPE  &trans             &trans                &trans                 &macro_adgod                                  &macro_iv  &trans              &kp PAGE_DOWN  &kp UP          &kp PG_UP  &trans          &trans
-&trans         &trans             &trans        &trans             &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans               &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp CS_DOLLAR  &kp BSLH
-&kp LSHIFT    &trans             &kp CS_HASH  &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                          &trans      &trans                    &kp CS_RIGHT_BRACE  &trans          &kp CS_LT       &kp CS_GT  &kp CS_ASTRK   &kp RSHFT
-&kp LCTRL     &trans             &trans        &trans             &trans                                      &trans         &trans  &trans      &trans  &trans  &trans                          &trans          &trans           &trans      &trans          &kp RCTRL
+&kp CS_TILDE  &trans            &kp CARET    &trans            &trans               &trans                &trans                                            &trans     &kp GRAVE           &trans         &trans          &trans     &trans         &trans
+&trans        &kp CS_BACKSLASH  &kp CS_PIPE  &trans            &trans               &trans                &macro_adgod                                      &macro_iv  &trans              &kp PAGE_DOWN  &kp UP          &kp PG_UP  &trans         &trans
+&trans        &trans            &trans       &trans            &kp CS_LEFT_BRACKET  &kp CS_RIGHT_BRACKET  &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans              &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &kp CS_DOLLAR  &kp BSLH
+&kp LSHIFT    &trans            &kp CS_HASH  &kp CS_AMPERSAND  &kp CS_AT            &kp CS_LEFT_BRACE                           &trans      &trans                     &kp CS_RIGHT_BRACE  &trans         &kp CS_LT       &kp CS_GT  &kp CS_ASTRK   &kp RSHFT
+&kp LCTRL     &trans            &trans       &trans            &trans                                     &trans        &trans  &trans      &trans  &trans  &trans                         &trans         &trans          &trans     &trans         &kp RCTRL
             >;
         };
 
