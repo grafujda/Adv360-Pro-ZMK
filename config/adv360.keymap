@@ -145,6 +145,13 @@
                 <&kp KP_NUMBER_1 &kp J &kp B &kp M &kp S &kp RBKT &kp ENTER>;
         };
 
+        macro_adtier: adtier {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp LS(L) &kp P &kp D &kp M &kp P &kp A &kp B &kp N &kp P &kp P &kp A &kp N &kp B &kp N3 &kp S &kp K &kp A>;
+            label = "ADTIER";
+        };
+
         #include "version.dtsi"
 
         hm: homerow_mods {
@@ -187,7 +194,7 @@
         layer_ces {
             bindings = <
 &kp CS_TILDE  &trans         &kp LA(LC(NUMBER_3))  &trans         &trans         &trans         &trans                                            &trans     &kp LA(LC(N7))  &trans         &trans             &trans           &trans                &trans
-&trans        &kp LA(LC(Q))  &kp LA(LC(W))         &trans         &trans         &trans         &macro_adgod                                      &macro_iv  &trans          &kp PAGE_DOWN  &kp UP             &kp PG_UP        &trans                &trans
+&trans        &kp LA(LC(Q))  &kp LA(LC(W))         &trans         &trans         &macro_adtier  &macro_adgod                                      &macro_iv  &trans          &kp PAGE_DOWN  &kp UP             &kp PG_UP        &trans                &trans
 &trans        &trans         &trans                &trans         &kp LA(LC(F))  &kp LA(LC(G))  &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans          &kp LEFT       &kp DOWN_ARROW     &kp RIGHT        &kp LA(LC(SEMI))      &kp ENTER
 &kp LSHIFT    &trans         &kp LA(LC(X))         &kp LA(LC(C))  &kp LA(LC(V))  &kp LA(LC(B))                        &trans      &trans                     &kp LA(LC(N))   &trans         &kp LA(LC(COMMA))  &kp LA(LC(DOT))  &kp LA(LC(ASTERISK))  &kp RSHFT
 &kp LCTRL     &trans         &trans                &trans         &trans                        &trans        &trans  &trans      &trans  &trans  &trans                     &trans         &trans             &trans           &trans                &kp RCTRL
