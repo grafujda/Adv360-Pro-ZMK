@@ -148,7 +148,7 @@
         macro_adtier: adtier {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp LS(L) &kp P &kp D &kp M &kp P &kp A &kp B &kp N &kp P &kp P &kp A &kp N &kp B &kp N3 &kp S &kp K &kp A>;
+            bindings = <&kp S &kp LS(L) &kp P &kp D &kp M &kp P &kp A &kp B &kp N &kp P &kp P &kp A &kp N &kp B &kp KP_NUMBER_3 &kp S &kp K &kp A>;
             label = "ADTIER";
         };
 
