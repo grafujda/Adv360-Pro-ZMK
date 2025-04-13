@@ -152,6 +152,13 @@
             label = "ADTIER";
         };
 
+        macro_peky: macro_peky {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(J) &kp LS(E) &kp LS(D) &kp LS(N) &kp LS(O) &kp LS(U) &kp V &kp S &kp E &kp C &kp H &kp N &kp O &kp S &kp K &kp O &kp N &kp C &kp I &kp N2 &kp N0 &kp N1 &kp N9 &kp N0 &kp N7 &kp RET>;
+            label = "MACRO_PEKY";
+        };
+
         #include "version.dtsi"
 
         hm: homerow_mods {
@@ -173,11 +180,11 @@
 
         default_layer {
             bindings = <
-&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &mo 1                                                  &mo 4          &kp N7  &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL
-&kp TAB    &kp Q      &kp W         &kp E   &kp R   &kp T   &kp INS                                                &kp LA(F9)     &kp Y   &kp U   &kp I      &kp O     &kp P      &kp LBKT
-&kp ESC    &kp A      &kp S         &kp D   &kp F   &kp G   &none      &mo 3     &kp LALT      &kp LGUI   &mo 3    &macro_conemu  &kp H   &kp J   &kp K      &kp L     &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z      &kp X         &kp C   &kp V   &kp B                        &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-&kp LCTRL  &kp GRAVE  &kp APOS      &mo 1   &mo 2           &kp SPACE  &kp BSPC  &kp END       &kp PG_DN  &kp DEL  &kp SPACE              &mo 2   &kp RALT   &kp BSLH  &kp RBKT   &kp RCTRL
+&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &sl 5                                                   &mo 4          &kp N7  &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL
+&kp TAB    &kp Q      &kp W         &kp E   &kp R   &kp T   &kp INSERT                                              &kp LA(F9)     &kp Y   &kp U   &kp I      &kp O     &kp P      &kp LBKT
+&kp ESC    &kp A      &kp S         &kp D   &kp F   &kp G   &none       &mo 3     &kp LALT      &kp LGUI   &mo 3    &macro_conemu  &kp H   &kp J   &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X         &kp C   &kp V   &kp B                         &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+&kp LCTRL  &kp GRAVE  &kp APOS      &mo 1   &mo 2           &kp SPACE   &kp BSPC  &kp END       &kp PG_DN  &kp DEL  &kp SPACE              &mo 2   &kp RALT   &kp BSLH  &kp RBKT   &kp RCTRL
             >;
         };
 
@@ -193,11 +200,11 @@
 
         layer_ces {
             bindings = <
-&kp CS_TILDE  &trans         &kp LA(LC(NUMBER_3))  &trans         &trans         &trans         &trans                                            &trans     &kp LA(LC(N7))  &trans         &trans             &trans           &trans                &trans
-&trans        &kp LA(LC(Q))  &kp LA(LC(W))         &trans         &trans         &macro_adtier  &macro_adgod                                      &macro_iv  &trans          &kp PAGE_DOWN  &kp UP             &kp PG_UP        &trans                &trans
-&trans        &trans         &trans                &trans         &kp LA(LC(F))  &kp LA(LC(G))  &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans          &kp LEFT       &kp DOWN_ARROW     &kp RIGHT        &kp LA(LC(SEMI))      &kp ENTER
-&kp LSHIFT    &trans         &kp LA(LC(X))         &kp LA(LC(C))  &kp LA(LC(V))  &kp LA(LC(B))                        &trans      &trans                     &kp LA(LC(N))   &trans         &kp LA(LC(COMMA))  &kp LA(LC(DOT))  &kp LA(LC(ASTERISK))  &kp RSHFT
-&kp LCTRL     &trans         &trans                &trans         &trans                        &trans        &trans  &trans      &trans  &trans  &trans                     &trans         &trans             &trans           &trans                &kp RCTRL
+&kp CS_TILDE  &trans     &kp RA(NUMBER_3)  &trans     &trans     &trans         &trans                                            &trans     &kp RA(N7)  &trans         &trans          &trans       &trans            &trans
+&trans        &kp RA(Q)  &kp RA(W)         &trans     &trans     &macro_adtier  &macro_adgod                                      &macro_iv  &trans      &kp PAGE_DOWN  &kp UP          &kp PG_UP    &trans            &trans
+&trans        &trans     &trans            &trans     &kp RA(F)  &kp RA(G)      &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans      &kp LEFT       &kp DOWN_ARROW  &kp RIGHT    &kp RA(SEMI)      &kp ENTER
+&kp LSHIFT    &trans     &kp RA(X)         &kp RA(C)  &kp RA(V)  &kp RA(B)                            &trans      &trans                     &kp RA(N)   &trans         &kp RA(COMMA)   &kp RA(DOT)  &kp RA(ASTERISK)  &kp RSHFT
+&kp LCTRL     &trans     &trans            &trans     &trans                    &trans        &trans  &trans      &trans  &trans  &trans                 &trans         &trans          &trans       &trans            &kp RCTRL
             >;
         };
 
@@ -213,11 +220,21 @@
 
         layer_mod {
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &trans  &none       &none       &none  &none  &none
+&none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none   &none       &none       &none  &none  &none
+&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none   &none       &none       &none  &none  &none
+&none           &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none   &none       &none       &none  &none  &none
+&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                 &bl BL_INC  &bl BL_DEC  &none  &none  &none
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans             &trans         &trans                                            &trans     &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans             &trans                               &trans      &trans                     &trans  &trans            &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LC(LG(RIGHT))                 &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &trans  &trans  &trans  &trans
             >;
         };
     };
