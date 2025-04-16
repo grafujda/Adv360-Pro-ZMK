@@ -155,7 +155,7 @@
         macro_peky: macro_peky {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(J) &kp LS(E) &kp LS(D) &kp LS(N) &kp LS(O) &kp LS(U) &kp V &kp S &kp E &kp C &kp H &kp N &kp O &kp S &kp K &kp O &kp N &kp C &kp I &kp N2 &kp N0 &kp N1 &kp N9 &kp N0 &kp N7 &kp RET>;
+            bindings = <&none &kp LS(J) &kp LS(E) &kp LS(D) &kp LS(N) &kp LS(O) &kp LS(U) &kp V &kp S &kp E &kp C &kp H &kp N &kp O &kp S &kp K &kp O &kp N &kp C &kp I &kp KP_NUMBER_2 &kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_N0 &kp KP_NUMBER_7 &kp RET>;
             label = "MACRO_PEKY";
         };
 
@@ -180,11 +180,11 @@
 
         default_layer {
             bindings = <
-&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &sl 5                                                   &mo 4          &kp N7  &kp N8  &kp N9     &kp N0    &kp MINUS  &kp EQUAL
-&kp TAB    &kp Q      &kp W         &kp E   &kp R   &kp T   &kp INSERT                                              &kp LA(F9)     &kp Y   &kp U   &kp I      &kp O     &kp P      &kp LBKT
-&kp ESC    &kp A      &kp S         &kp D   &kp F   &kp G   &none       &mo 3     &kp LALT      &kp LGUI   &mo 3    &macro_conemu  &kp H   &kp J   &kp K      &kp L     &kp SEMI   &kp ENTER
-&kp LSHFT  &kp Z      &kp X         &kp C   &kp V   &kp B                         &kp HOME      &kp PG_UP                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
-&kp LCTRL  &kp GRAVE  &kp APOS      &mo 1   &mo 2           &kp SPACE   &kp BSPC  &kp END       &kp PG_DN  &kp DEL  &kp SPACE              &mo 2   &kp RALT   &kp BSLH  &kp RBKT   &kp RCTRL
+&kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5  &kp N6  &sl 5                                                   &mo 4          &kp N7  &kp N8         &kp N9     &kp N0    &kp MINUS  &kp EQUAL
+&kp TAB    &kp Q      &kp W         &kp E   &kp R   &kp T   &kp INSERT                                              &kp LA(F9)     &kp Y   &kp U          &kp I      &kp O     &kp P      &kp LBKT
+&kp ESC    &kp A      &kp S         &kp D   &kp F   &kp G   &none       &mo 3     &kp LALT      &kp LGUI   &mo 3    &macro_conemu  &kp H   &kp J          &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp LSHFT  &kp Z      &kp X         &kp C   &kp V   &kp B                         &kp HOME      &kp PG_UP                          &kp N   &kp M          &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
+&kp LCTRL  &kp GRAVE  &kp APOS      &mo 1   &mo 2           &kp SPACE   &kp BSPC  &kp END       &kp PG_DN  &kp DEL  &kp SPACE              &kp RIGHT_ALT  &mo 2      &kp BSLH  &kp RBKT   &kp RCTRL
             >;
         };
 
@@ -230,11 +230,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans         &trans                                            &trans     &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans                               &trans      &trans                     &trans  &trans            &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &kp LC(LG(RIGHT))                 &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &trans                                            &trans     &trans  &trans            &trans             &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans             &trans  &kp RG(P)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &trans             &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &trans      &trans                     &trans  &trans            &trans             &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans                 &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans  &trans     &trans
             >;
         };
     };
