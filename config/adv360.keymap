@@ -162,14 +162,14 @@
         pulpin: pulpin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N5 &kp N7 &kp N6 &kp N5 &kp KP_ENTER>;
+            bindings = <&kp KP_NUMBER_5 &kp KP_NUMBER_7 &kp KP_NUMBER_6 &kp KP_NUMBER_5 &kp KP_ENTER>;
             label = "PULPIN";
         };
 
         fulpin: fulpin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N5 &kp N7 &kp N6 &kp N5 &kp N0 &kp N4 &kp N9 &kp N0 &kp KP_ENTER>;
+            bindings = <&kp KP_NUMBER_5 &kp KP_NUMBER_7 &kp KP_NUMBER_6 &kp KP_NUMBER_5 &kp KP_NUMBER_0 &kp KP_NUMBER_4 &kp KP_NUMBER_9 &kp KP_NUMBER_0 &kp KP_ENTER>;
             label = "FULPIN";
         };
 
