@@ -181,17 +181,17 @@
             label = "FULPIN";
         };
 
-        fanal: fanal {
+        macro_fanal: fanal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB &kp P &kp O &kp H &kp L &kp E &kp D &kp N2 &kp N0 &kp N2 &kp N1 &kp RET>;
+            bindings = <&kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB &kp P &kp O &kp H &kp L &kp E &kp D &kp KP_N2 &kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp ENTER>;
             label = "FANAL";
         };
 
         macro_fgate: fgate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB &kp B &kp R &kp A &kp N &kp A &kp N2 &kp N0 &kp N2 &kp N1 &kp RET>;
+            bindings = <&kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB &kp B &kp R &kp A &kp N &kp A &kp KP_NUMBER_2 &kp KP_N0 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp RET>;
             label = "FGATE";
         };
 
@@ -218,7 +218,7 @@
             bindings = <
 &kp N1     &kp N2     &kp NUMBER_3  &kp N4  &kp N5   &kp N6  &sl 5                                                       &mo 4          &kp N7  &kp N8         &kp N9     &kp N0    &kp MINUS  &kp EQUAL
 &kp TAB    &kp Q      &kp W         &kp E   &kp R    &kp T   &kp INSERT                                                  &kp LA(F9)     &kp Y   &kp U          &kp I      &kp O     &kp P      &kp LBKT
-&kp ESC    &kp A      &kp S         &kp D   &lt 2 F  &kp G   &kp RIGHT_GUI  &mo 3     &kp LALT       &kp LGUI   &mo 3    &macro_conemu  &kp H   &kp J          &kp K      &kp L     &kp SEMI   &kp ENTER
+&kp ESC    &kp A      &kp S         &kp D   &lt 2 F  &kp G   &kp RIGHT_GUI  &mo 3     &kp LALT       &kp LGUI   &tog 3   &macro_conemu  &kp H   &kp J          &kp K      &kp L     &kp SEMI   &kp ENTER
 &kp LSHFT  &kp Z      &kp X         &kp C   &kp V    &kp B                            &kp LC(X)      &kp PG_UP                          &kp N   &kp M          &kp COMMA  &kp DOT   &kp FSLH   &kp RSHFT
 &kp LCTRL  &kp GRAVE  &kp APOS      &tog 1  &tog 2           &lt 1 SPACE    &kp BSPC  &kp LC(C)      &kp LC(V)  &kp DEL  &kp SPACE              &kp RIGHT_ALT  &mo 2      &kp BSLH  &kp RBKT   &kp RCTRL
             >;
@@ -236,11 +236,11 @@
 
         layer_ces {
             bindings = <
-&kp CS_TILDE  &trans        &kp RA(NUMBER_3)  &trans     &trans     &trans         &trans                                            &trans     &kp RA(N7)      &trans          &trans         &trans       &trans            &trans
-&trans        &kp RA(Q)     &kp RA(W)         &trans     &trans     &macro_adtier  &macro_adgod                                      &macro_iv  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP    &kp END      &trans            &trans
-&trans        &trans        &trans            &trans     &kp RA(F)  &kp RA(G)      &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT    &kp RA(SEMI)      &kp ENTER
-&kp LSHIFT    &trans        &kp RA(X)         &kp RA(C)  &kp RA(V)  &kp RA(B)                            &trans      &trans                     &kp RA(N)       &trans          &kp RA(COMMA)  &kp RA(DOT)  &kp RA(ASTERISK)  &kp RSHFT
-&kp LCTRL     &kp LEFT_ALT  &kp LEFT_CONTROL  &trans     &trans                    &trans        &trans  &trans      &trans  &trans  &trans                     &trans          &trans         &trans       &trans            &kp RCTRL
+&kp CS_TILDE  &trans        &kp RA(NUMBER_3)  &trans          &trans     &trans         &trans                                            &trans     &kp RA(N7)      &trans          &trans         &trans       &trans            &trans
+&trans        &kp RA(Q)     &kp RA(W)         &trans          &trans     &macro_adtier  &macro_adgod                                      &macro_iv  &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP    &kp END      &trans            &trans
+&trans        &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp RA(F)  &kp RA(G)      &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT    &kp RA(SEMI)      &kp ENTER
+&kp LSHIFT    &trans        &kp RA(X)         &kp RA(C)       &kp RA(V)  &kp RA(B)                            &trans      &trans                     &kp RA(N)       &trans          &kp RA(COMMA)  &kp RA(DOT)  &kp RA(ASTERISK)  &kp RSHFT
+&kp LCTRL     &trans        &kp LEFT_CONTROL  &trans          &trans                    &trans        &trans  &trans      &trans  &trans  &trans                     &trans          &trans         &trans       &trans            &kp RCTRL
             >;
         };
 
@@ -266,11 +266,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans         &trans                                            &trans     &trans  &trans            &trans             &trans   &trans     &trans
-&trans  &trans  &trans  &trans  &trans        &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans             &trans   &kp RG(P)  &trans
-&trans  &fanal  &trans  &trans  &macro_fgate  &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &fulpin            &pulpin  &trans     &trans
-&trans  &trans  &trans  &trans  &trans        &trans                               &trans      &trans                     &trans  &trans            &trans             &trans   &trans     &trans
-&trans  &trans  &trans  &trans  &trans                       &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans     &trans
+&trans  &trans        &trans  &trans  &trans        &trans         &trans                                            &trans     &trans  &trans            &trans             &trans   &trans     &trans
+&trans  &trans        &trans  &trans  &trans        &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans             &trans   &kp RG(P)  &trans
+&trans  &macro_fanal  &trans  &trans  &macro_fgate  &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &fulpin            &pulpin  &trans     &trans
+&trans  &trans        &trans  &trans  &trans        &trans                               &trans      &trans                     &trans  &trans            &trans             &trans   &trans     &trans
+&trans  &trans        &trans  &trans  &trans                       &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans     &trans
             >;
         };
     };
