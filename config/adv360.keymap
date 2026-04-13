@@ -188,7 +188,7 @@
             label = "FANAL";
         };
 
-        fgate: fgate {
+        macro_fgate: fgate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp U &kp H &kp E &kp R &kp V &kp A &kp D &kp M &kp TAB &kp B &kp R &kp A &kp N &kp A &kp N2 &kp N0 &kp N2 &kp N1 &kp RET>;
@@ -266,11 +266,11 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans         &trans                                            &trans     &trans  &trans            &trans             &trans   &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans             &trans   &kp RG(P)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &fulpin            &pulpin  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans                               &trans      &trans                     &trans  &trans            &trans             &trans   &trans     &trans
-&trans  &trans  &trans  &trans  &trans                 &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans     &trans
+&trans  &trans  &trans  &trans  &trans        &trans         &trans                                            &trans     &trans  &trans            &trans             &trans   &trans     &trans
+&trans  &trans  &trans  &trans  &trans        &macro_adtier  &macro_adgod                                      &macro_iv  &trans  &trans            &trans             &trans   &kp RG(P)  &trans
+&trans  &fanal  &trans  &trans  &macro_fgate  &trans         &macro_um     &trans  &trans      &trans  &trans  &macro_vm  &trans  &macro_peky       &fulpin            &pulpin  &trans     &trans
+&trans  &trans  &trans  &trans  &trans        &trans                               &trans      &trans                     &trans  &trans            &trans             &trans   &trans     &trans
+&trans  &trans  &trans  &trans  &trans                       &trans        &trans  &trans      &trans  &trans  &trans             &kp LC(LG(LEFT))  &kp LC(LG(RIGHT))  &trans   &trans     &trans
             >;
         };
     };
